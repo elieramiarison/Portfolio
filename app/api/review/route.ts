@@ -1,6 +1,6 @@
-import { Review } from "@/lib/models/review";
+import { Review } from "../../../lib/models/review"
 import { NextRequest, NextResponse } from "next/server";
-import connectDB from "@/lib/mongodb";
+import connectDB from "../../../lib/mongodb"
 // import { connectDB } from "@/lib/mongodb";
 
 export const POST = async (req: NextRequest) => {

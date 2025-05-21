@@ -2,11 +2,11 @@
 
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useCallback } from "react";
-import js from "@/public/js.png"
-import ts from "@/public/ts.png"
-import next from "@/public/next.png"
-import node from "@/public/node.png"
-import react from "@/public/react.png"
+import js from "../../public/js.png"
+import ts from "../../public/ts.png"
+import next from "../../public/next.png"
+import node from "../../public/node.png"
+import react from "../../public/react.png"
 
 import Image from "next/image";
 

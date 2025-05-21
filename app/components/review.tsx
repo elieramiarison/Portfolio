@@ -3,11 +3,11 @@ import { useState, useEffect } from "react"
 import type { ReviewType } from "../types/review"
 import Image from "next/image"
 import type { StaticImageData } from 'next/image';
-import love from "@/public/love.gif"
-import wow from "@/public/wow.gif"
-import like from "@/public/like.gif"
-import sad from "@/public/sad.gif"
-import angry from "@/public/angry.gif"
+import love from "../../public/love.gif"
+import wow from "../../public/wow.gif"
+import like from "../../public/like.gif"
+import sad from "../../public/sad.gif"
+import angry from "../../public/angry.gif"
 import {
   ResponsiveContainer,
   BarChart,

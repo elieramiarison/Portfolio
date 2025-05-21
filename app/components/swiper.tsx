@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useCallback } from "react";
 import js from "@/public/js.png"
 import ts from "@/public/ts.png"
 import next from "@/public/next.png"

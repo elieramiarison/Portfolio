@@ -24,6 +24,47 @@
 //     }
 // }
 
+// import mongoose from "mongoose";
+
+// const MONGODB_URL = process.env.MONGODB_URL!;
+// if (!MONGODB_URL) {
+//     throw new Error("Please define the MONGODB_URL environment variable");
+// }
+
+// interface MongooseCache {
+//     conn: typeof mongoose | null;
+//     promise: Promise<typeof mongoose> | null;
+// }
+
+// declare global {
+//     var mongooseCache: MongooseCache | undefined;
+// }
+
+// const cached = global.mongooseCache || { conn: null, promise: null };
+
+// if (!global.mongooseCache) {
+//     global.mongooseCache = cached;
+// }
+
+// async function connectDB() {
+//     if (cached.conn) {
+//         return cached.conn;
+//     }
+
+//     if (!cached.promise) {
+//         cached.promise = mongoose.connect(MONGODB_URL, {
+//             dbName: "portfolio",
+//         }).then((mongoose) => {
+//             return mongoose;
+//         });
+//     }
+
+//     cached.conn = await cached.promise;
+//     return cached.conn;
+// }
+
+// export default connectDB;
+
 import mongoose from "mongoose";
 
 const MONGODB_URL = process.env.MONGODB_URL!;
@@ -36,15 +77,16 @@ interface MongooseCache {
     promise: Promise<typeof mongoose> | null;
 }
 
-declare global {
-    var mongooseCache: MongooseCache | undefined;
+// On ajoute dynamiquement une propriété à globalThis avec typage
+const globalWithMongoose = globalThis as typeof globalThis & {
+    mongooseCache?: MongooseCache;
+};
+
+if (!globalWithMongoose.mongooseCache) {
+    globalWithMongoose.mongooseCache = { conn: null, promise: null };
 }
 
-const cached = global.mongooseCache || { conn: null, promise: null };
-
-if (!global.mongooseCache) {
-    global.mongooseCache = cached;
-}
+const cached = globalWithMongoose.mongooseCache;
 
 async function connectDB() {
     if (cached.conn) {
@@ -54,9 +96,7 @@ async function connectDB() {
     if (!cached.promise) {
         cached.promise = mongoose.connect(MONGODB_URL, {
             dbName: "portfolio",
-        }).then((mongoose) => {
-            return mongoose;
-        });
+        }).then((mongoose) => mongoose);
     }
 
     cached.conn = await cached.promise;

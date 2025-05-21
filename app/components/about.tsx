@@ -15,7 +15,7 @@ const About = () => {
                         <div className='md:w-[35rem] sm:w-[30rem] w-[25rem]'>
                             <AnimatedSection1 delay={0.6}>
                                 <h3 className='z-[20rem] relative font-[Gilroy-light, Arial, Helvetica, sans-serif] md:text-base sm:text-sm text-sm px-5'>
-                                    Fort d'une solide expérience dans le développement web, je suis un développeur Fullstack JavaScript passionné par les technologies web, en particulier JavaScript et ses frameworks. Je combine mes compétences techniques avec une forte capacité d'adaptation, ce qui me permet de relever des défis complexes et de m'intégrer rapidement dans des projets en cours.
+                                    Fort d&apos;une solide expérience dans le développement web, je suis un développeur Fullstack JavaScript passionné par les technologies web, en particulier JavaScript et ses frameworks. Je combine mes compétences techniques avec une forte capacité d&apos;adaptation, ce qui me permet de relever des défis complexes et de m&apos;intégrer rapidement dans des projets en cours.
                                 </h3>
                             </AnimatedSection1>
                         </div>

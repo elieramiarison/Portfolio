@@ -13,17 +13,22 @@ export const POST = async (req: NextRequest) => {
         const newReview = new Review({ name, statut, message, reaction })
         const reviewSave = await newReview.save()
         return NextResponse.json(reviewSave, { status: 201 })
-    } catch (error) {
-        return NextResponse.json({ message: "Erreur Serveur" }, { status: 500 })
+    } catch (error: unknown) {
+        console.error("Erreur serveur:", error);
+        return NextResponse.json(
+            { message: "Erreur serveur" },
+            { status: 500 }
+        );
     }
 }
 
-export const GET = async (req: NextRequest) => {
+export const GET = async () => {
     try {
         await connectDB()
         const res = await Review.find()
         return NextResponse.json(res, { status: 200 })
-    } catch (error) {
+    } catch (error: unknown) {
+        console.error("Erreur serveur:", error);
         return NextResponse.json(
             { message: "Erreur serveur" },
             { status: 500 }

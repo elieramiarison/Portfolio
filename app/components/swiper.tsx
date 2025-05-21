@@ -32,25 +32,25 @@ const MyAnimatedCarousel = () => {
         startAutoScroll();
     }, [startAutoScroll]);
 
-    const stopAndMove = async (direction: "left" | "right") => {
-        await controls.stop();
+    // const stopAndMove = async (direction: "left" | "right") => {
+    //     await controls.stop();
 
-        const newOffset = direction === "left"
-            ? offset + CARD_WIDTH
-            : offset - CARD_WIDTH;
+    //     const newOffset = direction === "left"
+    //         ? offset + CARD_WIDTH
+    //         : offset - CARD_WIDTH;
 
-        setOffset(newOffset);
+    //     setOffset(newOffset);
 
-        await controls.start({
-            x: newOffset,
-            transition: { duration: 0.8 },
-        });
+    //     await controls.start({
+    //         x: newOffset,
+    //         transition: { duration: 0.8 },
+    //     });
 
-        setTimeout(() => {
-            setOffset(0);
-            startAutoScroll();
-        }, 1000);
-    };
+    //     setTimeout(() => {
+    //         setOffset(0);
+    //         startAutoScroll();
+    //     }, 1000);
+    // };
 
     return (
         <div className="p-5 relative">

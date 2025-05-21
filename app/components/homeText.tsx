@@ -6,7 +6,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import MyAnimatedCarousel from './swiper';
 import { AnimatedTypingText } from '../animation/animationdif';
-import Link from 'next/link';
+// import Link from 'next/link';
 import { motion, useInView, useAnimation } from "framer-motion"
 import { useRef, useEffect } from 'react';
 

@@ -17,7 +17,7 @@ import {
   Tooltip,
   Cell
 } from 'recharts'
-import Contact from "./contact"
+// import Contact from "./contact"
 
 const avatarColors = [
   "bg-red-500",
@@ -80,7 +80,7 @@ const Review = () => {
         const data = await res.json()
         setData(data)
       } catch (error: unknown) {
-        console.log("Erreur lors de recuperation")
+        console.log("Erreur lors de recuperation", error)
       }
     }
     fetchDoctors()

@@ -6,7 +6,7 @@ const Disclaimer = () => {
                 <div>
                     <h1 className="text-base font-semibold">Avertissement ⚠</h1>
                     <div className="text-[0.8rem] pt-4">
-                        <h1>Ce site web est encore en cours de développement, certaines sections n'ont pas encore été terminées. <br /> Si vous souhaitez en savoir plus sur moi, vous pouvez <a
+                        <h1>Ce site web est encore en cours de développement, certaines sections n&apos;ont pas encore été terminées. <br /> Si vous souhaitez en savoir plus sur moi, vous pouvez <a
                             href="/CV_fullstack_elie.pdf"
                             download="CV_Elie_Ramiarison.pdf"
                             target="_blank"

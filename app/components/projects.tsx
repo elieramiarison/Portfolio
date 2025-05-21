@@ -50,11 +50,11 @@ const Projects = () => {
                         <div className="bg-[#4a0a9d69] backdrop-blur-3xl lg:p-4 md:p-4 sm:p-4 p-4 rounded-md">
                             <div className="relative group w-fit" >
                                 <img src="/pharma.jpg" alt="photo" width={100} height={100} className="lg:w-[24rem] lg:h-[14rem] md:w-[24rem] md:h-[14rem] sm:w-[24rem] sm:h-[14rem] w-[20rem] h-[10rem] object-cover" />
-                                <a href="https://rendezia-rdv-medical.vercel.app/" target="blank" rel="noopener noreferrer" className="absolute bottom-2 right-5 bg-[#090909b6] text-sm px-4 py-1 rounded-2xl flex items-center gap-1 text-white
+                                <a href="https://github.com/elieramiarison/" target="blank" rel="noopener noreferrer" className="absolute bottom-2 right-5 bg-[#090909b6] text-sm px-4 py-1 rounded-2xl flex items-center gap-1 text-white
                opacity-0 translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">Jetez un oeil <FaLink size={12} /></a>
                             </div>
                             <div className="flex flex-col justify-start items-start pt-2 gap-2 lg:w-[24rem] md:w-[24rem] sm:w-[24rem] w-[20rem]">
-                                <h1 className="text-start font-semibold">PharmaStock - Gestion de stockage de medicament</h1>
+                                <h1 className="text-start font-semibold">PharmaStock - Gestion de stockage des medicaments</h1>
                                 <div className="flex gap-3">
                                     <p className="border-[1px] border-[#FF004B] rounded-xl lg:text-[0.7rem] md:text-[0.7rem] sm:text-[0.7rem] text-[0.6rem] px-2 py-1">Next.JS</p>
                                     <p className="border-[1px] border-[#FF004B] rounded-xl lg:text-[0.7rem] md:text-[0.7rem] sm:text-[0.7rem] text-[0.6rem] px-2 py-1">Nest.JS</p>
@@ -104,7 +104,7 @@ const Projects = () => {
                         <div className="bg-[#4a0a9d69] backdrop-blur-3xl p-4 rounded-md">
                             <div className="relative group w-fit" >
                                 <img src="/back-off.jpg" alt="photo" width={100} height={100} className="lg:w-[24rem] lg:h-[14rem] md:w-[24rem] md:h-[14rem] sm:w-[24rem] sm:h-[14rem] w-[20rem] object-cover" />
-                                <a href="https://rendezia-rdv-medical.vercel.app/" target="blank" rel="noopener noreferrer" className="absolute bottom-2 right-5 bg-[#090909b6] text-sm px-4 py-1 rounded-2xl flex items-center gap-1 text-white
+                                <a href="https://github.com/elieramiarison/" target="blank" rel="noopener noreferrer" className="absolute bottom-2 right-5 bg-[#090909b6] text-sm px-4 py-1 rounded-2xl flex items-center gap-1 text-white
                opacity-0 translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">Jetez un oeil <FaLink size={12} /></a>
                             </div>
                             <div className="flex flex-col justify-start items-start pt-2 gap-2">
@@ -156,11 +156,11 @@ const Projects = () => {
                         <div className="bg-[#4a0a9d69] backdrop-blur-3xl p-4 rounded-md">
                             <div className="relative group w-fit" >
                                 <img src="/portfolio2.jpg" alt="photo" width={100} height={100} className="lg:w-[24rem] lg:h-[14rem] md:w-[24rem] md:h-[14rem] sm:w-[24rem] sm:h-[14rem] w-[20rem] object-cover" />
-                                <a href="https://elie-ramiarison.app/" target="blank" rel="noopener noreferrer" className="absolute bottom-2 right-5 bg-[#090909b6] text-sm px-4 py-1 rounded-2xl flex items-center gap-1 text-white
+                                <a href="https://elie-ramiarison.vercel.app/" target="blank" rel="noopener noreferrer" className="absolute bottom-2 right-5 bg-[#090909b6] text-sm px-4 py-1 rounded-2xl flex items-center gap-1 text-white
                opacity-0 translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">Jetez un oeil <FaLink size={12} /></a>
                             </div>
                             <div className="flex flex-col justify-start items-start pt-2 gap-2">
-                                <h1 className="text-start font-semibold">Back-office</h1>
+                                <h1 className="text-start font-semibold">Cette nouveau portfolio</h1>
                                 <div className="flex gap-3">
                                     <p className="border-[1px] border-[#FF004B] rounded-xl lg:text-[0.7rem] md:text-[0.7rem] sm:text-[0.7rem] text-[0.6rem] px-2 py-1">React.JS</p>
                                     <p className="border-[1px] border-[#FF004B] rounded-xl lg:text-[0.7rem] md:text-[0.7rem] sm:text-[0.7rem] text-[0.6rem] px-2 py-1">Express.JS</p>

@@ -201,7 +201,7 @@ const HomeText = () => {
                             alt="Elie"
                             width={100}
                             height={100}
-                            className="lg:w-[14rem] lg:h-[22rem] md:w-[12rem] md:h-[20rem] sm:w-[11rem] sm:h-[18rem] w-[9rem] h-[16rem] rounded-b-full relative z-10"
+                            className="lg:w-[14rem] lg:h-[22rem] md:w-[12rem] md:h-[20rem] sm:w-[11rem] sm:h-[18rem] w-[9rem] h-[16rem] rounded-b-full relative z-10 pointer-events-none select-none" draggable={false}
                         />
                     </div>
 

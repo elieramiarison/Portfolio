@@ -16,6 +16,7 @@ import mongo from "@/public/mongodb.svg"
 import mysql from "@/public/mysql.svg"
 import Image from "next/image"
 import { useState } from "react"
+import AnimatedSection1 from "../animation/animationdif"
 
 
 const Skils = () => {
@@ -50,100 +51,106 @@ const Skils = () => {
     return (
         <section id="skils">
             <div className="flex flex-col justify-center items-center gap-7 text-center py-24">
-                <h1 className="text-3xl font-bold">COMPETENCES</h1>
-                <div className="flex gap-8">
-                    <button
-                        className={`relative py-1 cursor-pointer transition-colors duration-300 ${front_ ? 'text-[#c000b0]' : 'text-white'
-                            }`}
-                        onClick={handleFront}
-                    >
-                        Frontend
-
-                        <span
-                            className={`absolute left-0 bottom-0 h-[2px] bg-gradient-to-r from-[#c000b0] to-[#4a0a9d] transition-all duration-300 ease-in-out ${front_ ? 'w-full' : 'w-0'
+                <AnimatedSection1 delay={0.3}>
+                    <h1 className="text-3xl font-bold">COMPETENCES</h1>
+                </AnimatedSection1>
+                <AnimatedSection1 delay={0.6}>
+                    <div className="flex gap-8">
+                        <button
+                            className={`relative py-1 cursor-pointer transition-colors duration-300 ${front_ ? 'text-[#c000b0]' : 'text-white'
                                 }`}
-                        ></span>
-                    </button>
+                            onClick={handleFront}
+                        >
+                            Frontend
 
-                    <button
-                        className={`relative py-1 cursor-pointer transition-colors duration-300 ${back ? 'text-[#c000b0]' : 'text-white'
-                            }`}
-                        onClick={handleBack}
-                    >
-                        Backend
+                            <span
+                                className={`absolute left-0 bottom-0 h-[2px] bg-gradient-to-r from-[#c000b0] to-[#4a0a9d] transition-all duration-300 ease-in-out ${front_ ? 'w-full' : 'w-0'
+                                    }`}
+                            ></span>
+                        </button>
 
-                        <span
-                            className={`absolute left-0 bottom-0 h-[2px] bg-gradient-to-r from-[#c000b0] to-[#4a0a9d] transition-all duration-300 ease-in-out ${back ? 'w-full' : 'w-0'
+                        <button
+                            className={`relative py-1 cursor-pointer transition-colors duration-300 ${back ? 'text-[#c000b0]' : 'text-white'
                                 }`}
-                        ></span>
-                    </button>
+                            onClick={handleBack}
+                        >
+                            Backend
 
-                    <button
-                        className={`relative py-1 cursor-pointer transition-colors duration-300 ${db ? 'text-[#c000b0]' : 'text-white'
-                            }`}
-                        onClick={handleDb}
-                    >
-                        Base de données
+                            <span
+                                className={`absolute left-0 bottom-0 h-[2px] bg-gradient-to-r from-[#c000b0] to-[#4a0a9d] transition-all duration-300 ease-in-out ${back ? 'w-full' : 'w-0'
+                                    }`}
+                            ></span>
+                        </button>
 
-                        <span
-                            className={`absolute left-0 bottom-0 h-[2px] bg-gradient-to-r from-[#c000b0] to-[#4a0a9d] transition-all duration-300 ease-in-out ${db ? 'w-full' : 'w-0'
+                        <button
+                            className={`relative py-1 cursor-pointer transition-colors duration-300 ${db ? 'text-[#c000b0]' : 'text-white'
                                 }`}
-                        ></span>
-                    </button>
-                </div>
+                            onClick={handleDb}
+                        >
+                            Base de données
 
-                <div>
+                            <span
+                                className={`absolute left-0 bottom-0 h-[2px] bg-gradient-to-r from-[#c000b0] to-[#4a0a9d] transition-all duration-300 ease-in-out ${db ? 'w-full' : 'w-0'
+                                    }`}
+                            ></span>
+                        </button>
+                    </div>
+                </AnimatedSection1>
 
-                    {front_ && (
-                        <>
-                            <h1 className="p-4 font-bold">FRONTEND</h1>
-                            <div className="flex flex-wrap justify-center gap-8 w-full">
+                <AnimatedSection1 delay={0.6}>
+                    <div>
 
-                                {
-                                    front.map((item, index) => (
-                                        <div key={index} className="flex flex-col justify-center items-center gap-1 backdrop-blur-3xl bg-[#4a0a9d]/70 w-[9rem] h-[9rem] rounded-lg">
-                                            <Image src={iconFront[index]} alt={item} width={70} height={70} />
-                                            <h1>{item}</h1>
-                                        </div>
-                                    ))
-                                }
-                            </div>
-                        </>
-                    )}
+                        {front_ && (
+                            <>
+                                <h1 className="p-4 font-bold">FRONTEND</h1>
+                                <div className="flex flex-wrap justify-center gap-8 w-full">
+
+                                    {
+                                        front.map((item, index) => (
+                                            <div key={index} className="flex flex-col justify-center items-center gap-1 backdrop-blur-3xl bg-[#4a0a9d]/70 w-[9rem] h-[9rem] rounded-lg">
+                                                <Image src={iconFront[index]} alt={item} width={70} height={70} />
+                                                <h1>{item}</h1>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            </>
+                        )}
 
 
-                    {back && (
-                        <>
-                            <h1 className="p-4 font-bold">BACKEND</h1>
-                            <div className="flex flex-wrap justify-center gap-8 w-full p-4 rounded-lg">
-                                {
-                                    backend.map((item, index) => (
-                                        <div key={index} className="flex flex-col justify-center items-center gap-1 backdrop-blur-3xl bg-[#4a0a9d]/70 w-[9rem] h-[9rem] rounded-lg">
-                                            <Image src={iconBack[index]} alt={item} width={70} height={70} />
-                                            <h1>{item}</h1>
-                                        </div>
-                                    ))
-                                }
-                            </div>
-                        </>
-                    )}
+                        {back && (
+                            <>
+                                <h1 className="p-4 font-bold">BACKEND</h1>
+                                <div className="flex flex-wrap justify-center gap-8 w-full p-4 rounded-lg">
+                                    {
+                                        backend.map((item, index) => (
+                                            <div key={index} className="flex flex-col justify-center items-center gap-1 backdrop-blur-3xl bg-[#4a0a9d]/70 w-[9rem] h-[9rem] rounded-lg">
+                                                <Image src={iconBack[index]} alt={item} width={70} height={70} />
+                                                <h1>{item}</h1>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            </>
+                        )}
 
-                    {db && (
-                        <>
-                            <h1 className="p-4 font-bold">BASE DE DONNEES</h1>
-                            <div className="flex flex-wrap justify-center gap-8 w-full p-4 rounded-lg">
-                                {
-                                    bd.map((item, index) => (
-                                        <div key={index} className="flex flex-col justify-center items-center gap-1 backdrop-blur-3xl bg-[#4a0a9d]/70 w-[9rem] h-[9rem] rounded-lg">
-                                            <Image src={iconBd[index]} alt={item} width={70} height={70} />
-                                            <h1>{item}</h1>
-                                        </div>
-                                    ))
-                                }
-                            </div>
-                        </>
-                    )}
-                </div>
+                        {db && (
+                            <>
+                                <h1 className="p-4 font-bold">BASE DE DONNEES</h1>
+                                <div className="flex flex-wrap justify-center gap-8 w-full p-4 rounded-lg">
+                                    {
+                                        bd.map((item, index) => (
+                                            <div key={index} className="flex flex-col justify-center items-center gap-1 backdrop-blur-3xl bg-[#4a0a9d]/70 w-[9rem] h-[9rem] rounded-lg">
+                                                <Image src={iconBd[index]} alt={item} width={70} height={70} />
+                                                <h1>{item}</h1>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            </>
+                        )}
+                    </div>
+                </AnimatedSection1>
                 <div
                     className="
                         absolute

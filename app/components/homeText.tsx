@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image'
 import { FaLinkedin } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
@@ -6,8 +7,23 @@ import { FaGithub } from "react-icons/fa";
 import MyAnimatedCarousel from './swiper';
 import { AnimatedTypingText } from '../animation/animationdif';
 import Link from 'next/link';
+import { motion, useInView, useAnimation } from "framer-motion"
+import { useRef, useEffect } from 'react';
 
 const HomeText = () => {
+
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true })
+    const mainControls = useAnimation()
+    const slideControls = useAnimation()
+
+    useEffect(() => {
+        if (isInView) {
+            mainControls.start("visible")
+            slideControls.start("visible")
+        }
+    }, [isInView])
+
     return (
         // <section id='home'>
         //     <div className='flex flex-col justify-center items-center w-full'>
@@ -128,22 +144,49 @@ const HomeText = () => {
                                 Télécharger mon CV
                             </a>
                         </div>
-                        <div className='flex md:justify-start items-start sm:justify-center justify-center sm:text-center gap-2'>
-                            <Link href='https://www.linkedin.com/in/elie-ramiarison-ab59502bb' target='_blank' className='cursor-pointer'>
+                        <div ref={ref} className='flex md:justify-start items-start sm:justify-center justify-center sm:text-center gap-2'>
+                            {/* <motion.div
+                                variants={{
+                                    hidden: { opacity: 0, y: 75 },
+                                    visible: { opacity: 1, y: 0 },
+                                }}
+                                initial="hidden"
+                                animate={slideControls}
+                                transition={{ duration: 0.5, delay: 0.25 }}
+                            > */}
+                            <motion.a
+                                href='https://www.linkedin.com/in/elie-ramiarison-ab59502bb'
+                                target='_blank'
+                                className='cursor-pointer'
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, y: 75 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.1 }}
+                            >
                                 <FaLinkedin size={30} color="#0077b5" />
-                            </Link>
+                            </motion.a>
 
-                            <Link href='https://wa.me/+261342527004' target='_blank' className='cursor-pointer'>
+                            <motion.a href='https://wa.me/+261342527004' target='_blank' className='cursor-pointer' rel="noopener noreferrer"
+                                initial={{ opacity: 0, y: 75 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.3 }}>
                                 <FaWhatsapp size={30} color="#25D366" />
-                            </Link>
+                            </motion.a>
 
-                            <Link href='mailto:eliespirale1@gmail.com' target='_blank' className='cursor-pointer'>
+                            <motion.a href='mailto:eliespirale1@gmail.com' target='_blank' className='cursor-pointer' rel="noopener noreferrer"
+                                initial={{ opacity: 0, y: 75 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.6 }}>
                                 <MdOutlineMailOutline size={30} color="#D44638" />
-                            </Link>
+                            </motion.a>
 
-                            <Link href='https://github.com/elieramiarison/' target='_blank' className='cursor-pointer'>
+                            <motion.a href='https://github.com/elieramiarison/' target='_blank' className='cursor-pointer' rel="noopener noreferrer"
+                                initial={{ opacity: 0, y: 75 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.9 }}>
                                 <FaGithub size={30} color="#fff" />
-                            </Link>
+                            </motion.a>
+                            {/* </motion.div> */}
                         </div>
                     </div>
 

@@ -14,8 +14,8 @@ const skils = [js, ts, node, react, next];
 
 const MyAnimatedCarousel = () => {
     const controls = useAnimation();
-    const [offset, setOffset] = useState(0);
-    const CARD_WIDTH = 220;
+    // const [offset, setOffset] = useState(0);
+    // const CARD_WIDTH = 220;
 
     const startAutoScroll = useCallback(() => {
         controls.start({

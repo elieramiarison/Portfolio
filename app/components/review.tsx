@@ -154,7 +154,7 @@ const Review = () => {
         {/* <div> */}
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-2 bg-gray-300 text-black py-10 px-5 mx-5 rounded-lg lg:w-[28rem] md:w-[28rem] sm:w-full w-full">
+          className="flex flex-col gap-2 bg-gray-300 text-black py-10 px-5 mx-5 rounded-xl lg:w-[28rem] md:w-[28rem] sm:w-full w-full">
           <h1 className="text-2xl font-sans flex justify-center text-center">Donnez votre avis</h1>
           {error.reaction && <h1 className="text-red-600 text-sm">Veillez choisir votre reaction 👇</h1>}
           <div className="flex justify-center gap-2 mb-4">
@@ -237,7 +237,7 @@ const Review = () => {
               {data.map((item, index) => (
                 <div className="bg-gray-300 p-2 rounded-lg flex items-center gap-2.5" key={index}>
                   <div className="relative">
-                    <div className={`w-13 h-13 rounded-full ${getColorFromString(item.name)} flex items-center justify-center text-white text-lg font-sans border-2 border-gray-300`}>
+                    <div className={`w-14 h-14 rounded-full ${getColorFromString(item.name)} flex items-center justify-center text-white text-lg font-sans border-2 border-gray-300`}>
                       {item.name?.[0]?.toUpperCase() || ""}
                     </div>
 

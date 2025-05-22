@@ -124,8 +124,8 @@ const HomeText = () => {
         <section id='home'>
             <div className='flex flex-col justify-center items-center w-full'>
                 <div className='flex 
-      lg:flex-row lg:text-start lg:w-5xl lg:mt-28
-      md:flex-row md:justify-between md:text-start md:w-[50rem] md:mt-32
+      lg:flex-row lg:text-start lg:w-5xl lg:mt-28 lg:w-[61rem]
+      md:flex-row md:justify-between md:text-start md:w-[48rem] md:mt-32
       sm:flex-col sm:mt-[14rem]
       flex-col items-center max-w-5xl gap-12 mt-[11rem]'>
 
@@ -135,7 +135,7 @@ const HomeText = () => {
                             Elie Ramiarison
                         </h1>
                         <AnimatedTypingText />
-                        <div className='lg:my-3.5 md:my-3.5 sm:my-4 my-4.5'>
+                        <div className='lg:my-3.5 md:my-3.5 sm:my-4 my-5'>
                             <a
                                 href="/CV_fullstack_elie.pdf"
                                 download="CV_Elie_Ramiarison.pdf"

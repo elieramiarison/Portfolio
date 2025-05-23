@@ -6,7 +6,7 @@ import { Link as ScrollLink } from "react-scroll"
 const Contact = () => {
     return (
         <section id="contact">
-            <div className="flex flex-col justify-center items-center my-16 relative z-10">
+            <div className="flex flex-col justify-center items-center my-16 relative z-10 text-white">
                 <div className="flex flex-col gap-6 text-start px-5 lg:w-[28rem] md:w-[28rem] sm:w-full w-full relative z-20">
                     <h1 className="text-3xl pb-3">Merci pour votre visite !</h1>
                     <h3>Donnez votre avis <ScrollLink to="review" smooth={true} duration={1000} offset={-70} className="cursor-pointer underline text-[#c000b0]">ici</ScrollLink></h3>

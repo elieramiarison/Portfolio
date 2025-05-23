@@ -150,7 +150,7 @@ const Review = () => {
 
   return (
     <section id="review">
-      <div className="flex flex-wrap justify-center items-center gap-10 pt-10">
+      <div className="flex flex-wrap justify-center items-center gap-10 pt-10 text-white">
         {/* <div> */}
         <form
           onSubmit={handleSubmit}

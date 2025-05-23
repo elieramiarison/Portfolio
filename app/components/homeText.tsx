@@ -130,7 +130,7 @@ const HomeText = () => {
       flex-col items-center max-w-5xl gap-12 mt-[11rem]'>
 
                     <div className='flex flex-col md:text-start sm:justify-center justify-center sm:text-center text-center relative z-[20rem] lg:gap-2 md:gap-2 sm:gap-2.5 gap-0'>
-                        <h1 className='font-semibold lg:text-6xl md:text-5xl sm:text-6xl text-[2.5rem]'>Hello, je suis</h1>
+                        <h1 className='font-semibold lg:text-6xl md:text-5xl sm:text-6xl text-[2.5rem] text-white'>Hello, je suis</h1>
                         <h1 className="font-sans lg:text-6xl md:text-5xl sm:text-6xl text-[2.5rem] bg-gradient-to-r from-[#c000b0] to-[#4a0a9d] bg-clip-text text-transparent">
                             Elie Ramiarison
                         </h1>

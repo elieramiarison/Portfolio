@@ -6,7 +6,7 @@ const About = () => {
     return (
         <section id='about'>
             <div className='flex justify-center items-center'>
-                <div className='flex flex-col justify-center text-center max-w-5xl w-5xl'>
+                <div className='flex flex-col justify-center text-center max-w-5xl w-5xl text-white'>
                     <AnimatedSection1 delay={0.3}>
                         <h1 className='font-bold p-12 md:text-3xl text-2xl'>A PROPOS DE MOI</h1>
                     </AnimatedSection1>

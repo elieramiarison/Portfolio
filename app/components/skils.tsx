@@ -50,7 +50,7 @@ const Skils = () => {
 
     return (
         <section id="skils">
-            <div className="flex flex-col justify-center items-center gap-7 text-center py-24">
+            <div className="flex flex-col justify-center items-center gap-7 text-center py-24 text-white">
                 <AnimatedSection1 delay={0.3}>
                     <h1 className="text-3xl font-bold">COMPETENCES</h1>
                 </AnimatedSection1>

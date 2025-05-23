@@ -2,7 +2,7 @@
 const Disclaimer = () => {
     return (
         <div>
-            <div className="my-10 flex justify-between items-center font-[inherit] pl-8">
+            <div className="my-10 flex justify-between items-center font-[inherit] pl-8 text-white">
                 <div>
                     <h1 className="text-base font-semibold">Avertissement ⚠</h1>
                     <div className="text-[0.8rem] pt-4">

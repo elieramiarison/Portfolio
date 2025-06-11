@@ -6,8 +6,8 @@ export default function Loader() {
     const [progress, setProgress] = useState(0);
 
     useEffect(() => {
-        let interval: NodeJS.Timeout;
-        interval = setInterval(() => {
+        // let interval: NodeJS.Timeout;
+        const interval: NodeJS.Timeout = setInterval(() => {
             setProgress((prev) => {
                 if (prev >= 100) {
                     clearInterval(interval);

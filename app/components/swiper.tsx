@@ -14,8 +14,6 @@ const skils = [js, ts, node, react, next];
 
 const MyAnimatedCarousel = () => {
     const controls = useAnimation();
-    // const [offset, setOffset] = useState(0);
-    // const CARD_WIDTH = 220;
 
     const startAutoScroll = useCallback(() => {
         controls.start({
@@ -32,28 +30,8 @@ const MyAnimatedCarousel = () => {
         startAutoScroll();
     }, [startAutoScroll]);
 
-    // const stopAndMove = async (direction: "left" | "right") => {
-    //     await controls.stop();
-
-    //     const newOffset = direction === "left"
-    //         ? offset + CARD_WIDTH
-    //         : offset - CARD_WIDTH;
-
-    //     setOffset(newOffset);
-
-    //     await controls.start({
-    //         x: newOffset,
-    //         transition: { duration: 0.8 },
-    //     });
-
-    //     setTimeout(() => {
-    //         setOffset(0);
-    //         startAutoScroll();
-    //     }, 1000);
-    // };
-
     return (
-        <div className="p-5 relative">
+        <div className="relative">
             <div className="overflow-hidden lg:w-[50rem] md:w-[40rem] sm:w-[30rem] w-[20rem] relative z-0 mx-auto">
                 <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-[#0a0a0afa] to-transparent z-10 pointer-events-none" />
 
@@ -66,9 +44,9 @@ const MyAnimatedCarousel = () => {
                         {[...skils, ...skils].map((skill, index) => (
                             <div
                                 key={index}
-                                className="min-w-[200px] p-4 text-center text-white"
+                                className="min-w-[200px] lg:p-4 md:p-4 sm:p-3 p-0 text-center text-white"
                             >
-                                <Image src={skill} alt="logo" width={200} height={200} className="opacity-80" />
+                                <Image src={skill} alt="logo" width={100} height={100} className="w-[75%] sm:w-[75%] md:w-[85%] lg:w-[95%] opacity-80" />
                             </div>
                         ))}
                     </div>

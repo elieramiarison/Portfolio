@@ -14,6 +14,11 @@ import postgres from "../../public/postrgres.png"
 import prisma from "../../public/prism.svg"
 import mongo from "../../public/mongodb.svg"
 import mysql from "../../public/mysql.svg"
+import git from "../../public/git.svg"
+import github from "../../public/github.svg"
+import docker from "../../public/docker.svg"
+import postman from "../../public/postman.svg"
+import figma from "../../public/figma.png"
 import Image from "next/image"
 import { useState } from "react"
 import AnimatedSection1 from "../animation/animationdif"
@@ -23,29 +28,42 @@ const Skils = () => {
     const [front_, setFront_] = useState(true)
     const [back, setBack] = useState(false)
     const [db, setDb] = useState(false)
+    const [outil, setOutil] = useState(false)
     const front = ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React JS", "Next JS"]
     const iconFront = [html, css, js, tailwind, react, next]
     const iconBack = [node, express, ts, php]
     const iconBd = [mongo, mysql, postgres, prisma]
+    const iconOutils = [git, github, docker, postman, figma]
     const backend = ["Node JS", "Express JS", "TypeScript", "PHP"]
     const bd = ["MongoDB", "MySQL", "Postgres SQL", "Prisma"]
+    const outils = ["Git", "GitHub", "Docker", "Postman", "Figma"]
 
     const handleFront = () => {
         setBack(false)
         setDb(false)
         setFront_(true)
+        setOutil(false)
     }
 
     const handleBack = () => {
         setBack(true)
         setDb(false)
         setFront_(false)
+        setOutil(false)
     }
 
     const handleDb = () => {
         setBack(false)
         setDb(true)
         setFront_(false)
+        setOutil(false)
+    }
+
+    const handleOutils = () => {
+        setBack(false)
+        setDb(false)
+        setFront_(false)
+        setOutil(true)
     }
 
     return (
@@ -55,9 +73,9 @@ const Skils = () => {
                     <h1 className="text-3xl font-bold">COMPETENCES</h1>
                 </AnimatedSection1>
                 <AnimatedSection1 delay={0.6}>
-                    <div className="flex gap-8">
+                    <div className="flex lg:gap-8 md:gap-8 sm:gap-5 gap-5">
                         <button
-                            className={`relative py-1 cursor-pointer transition-colors duration-300 ${front_ ? 'text-[#c000b0]' : 'text-white'
+                            className={`relative py-1 cursor-pointer transition-colors duration-300 lg:text-base md:text-base sm:text-base text-sm ${front_ ? 'text-[#c000b0]' : 'text-white'
                                 }`}
                             onClick={handleFront}
                         >
@@ -70,7 +88,7 @@ const Skils = () => {
                         </button>
 
                         <button
-                            className={`relative py-1 cursor-pointer transition-colors duration-300 ${back ? 'text-[#c000b0]' : 'text-white'
+                            className={`relative py-1 cursor-pointer transition-colors duration-300 lg:text-base md:text-base sm:text-base text-sm ${back ? 'text-[#c000b0]' : 'text-white'
                                 }`}
                             onClick={handleBack}
                         >
@@ -83,14 +101,27 @@ const Skils = () => {
                         </button>
 
                         <button
-                            className={`relative py-1 cursor-pointer transition-colors duration-300 ${db ? 'text-[#c000b0]' : 'text-white'
+                            className={`relative py-1 cursor-pointer transition-colors duration-300 lg:text-base md:text-base sm:text-base text-sm ${db ? 'text-[#c000b0]' : 'text-white'
                                 }`}
                             onClick={handleDb}
                         >
-                            Base de données
+                            Base des données
 
                             <span
                                 className={`absolute left-0 bottom-0 h-[2px] bg-gradient-to-r from-[#c000b0] to-[#4a0a9d] transition-all duration-300 ease-in-out ${db ? 'w-full' : 'w-0'
+                                    }`}
+                            ></span>
+                        </button>
+
+                        <button
+                            className={`relative py-1 cursor-pointer transition-colors duration-300 lg:text-base md:text-base sm:text-base text-sm ${outil ? 'text-[#c000b0]' : 'text-white'
+                                }`}
+                            onClick={handleOutils}
+                        >
+                            Outils
+
+                            <span
+                                className={`absolute left-0 bottom-0 h-[2px] bg-gradient-to-r from-[#c000b0] to-[#4a0a9d] transition-all duration-300 ease-in-out ${outil ? 'w-full' : 'w-0'
                                     }`}
                             ></span>
                         </button>
@@ -103,7 +134,7 @@ const Skils = () => {
                         {front_ && (
                             <>
                                 <h1 className="p-4 font-bold">FRONTEND</h1>
-                                <div className="flex flex-wrap justify-center gap-8 w-full">
+                                <div className="flex flex-wrap justify-center gap-8 w-full p-4 rounded-lg">
 
                                     {
                                         front.map((item, index) => (
@@ -142,6 +173,22 @@ const Skils = () => {
                                         bd.map((item, index) => (
                                             <div key={index} className="flex flex-col justify-center items-center gap-1 backdrop-blur-3xl bg-[#4a0a9d]/70 w-[9rem] h-[9rem] rounded-lg">
                                                 <Image src={iconBd[index]} alt={item} width={70} height={70} />
+                                                <h1>{item}</h1>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            </>
+                        )}
+
+                        {outil && (
+                            <>
+                                <h1 className="p-4 font-bold">OUTILS</h1>
+                                <div className="flex flex-wrap justify-center gap-8 w-full p-4 rounded-lg">
+                                    {
+                                        outils.map((item, index) => (
+                                            <div key={index} className="flex flex-col justify-center items-center gap-1 backdrop-blur-3xl bg-[#4a0a9d]/70 w-[9rem] h-[9rem] rounded-lg">
+                                                <Image src={iconOutils[index]} alt={item} width={70} height={70} />
                                                 <h1>{item}</h1>
                                             </div>
                                         ))

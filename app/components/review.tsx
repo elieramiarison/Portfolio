@@ -155,7 +155,7 @@ const Review = () => {
         <form
           onSubmit={handleSubmit}
           className="flex flex-col gap-2 bg-gray-300 text-black py-10 px-5 mx-5 rounded-xl lg:w-[28rem] md:w-[28rem] sm:w-full w-full">
-          <h1 className="text-2xl font-sans flex justify-center text-center">Donnez votre avis</h1>
+          <h1 className="text-2xl font-sans flex justify-center text-center">Donnez votre commentaire</h1>
           {error.reaction && <h1 className="text-red-600 text-sm">Veillez choisir votre reaction 👇</h1>}
           <div className="flex justify-center gap-2 mb-4">
             {reactions.map((reaction_) => (
@@ -199,14 +199,14 @@ const Review = () => {
             {error.statut && <h1 className="text-red-600 text-sm">Statut obligatoire</h1>}
           </div>
 
-          <label>Votre message<span className="text-red-500">*</span></label>
+          <label>Votre commentaire<span className="text-red-500">*</span></label>
           <div>
             <textarea
               value={message}
               className={`border-[1px] ${error.message ? "border-red-600" : "border-fuchsia-700"} rounded-md h-20 w-full p-1`}
               onChange={(e) => setMessage(e.target.value)}
             />
-            {error.message && <h1 className="text-red-600 text-sm">Message obligatoire</h1>}
+            {error.message && <h1 className="text-red-600 text-sm">Commentaire obligatoire</h1>}
           </div>
 
           <button className='bg-gradient-to-r from-[#c000b0] to-[#4a0a9d] p-2 mt-2 w-full rounded-md text-white cursor-pointer' type="submit">

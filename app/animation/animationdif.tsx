@@ -44,10 +44,8 @@ export const AnimatedTypingText: React.FC = () => {
     const [isDeleting, setIsDeleting] = useState(false);
     const typingSpeed = 100;
     const deletingSpeed = 100;
-    // const pauseTime = 2000;
 
-    // const { t } = useTranslation()
-    const textArray = ["Développeur JavaScrip", "Développeur MERN", "Développeur React.JS", "Développeur Next.JS"];
+    const textArray = ["Développeur JavaScript", "Développeur MERN", "Étudiant en IA et Cybersécurité", "Développeur Next.JS"];
 
     useEffect(() => {
         const currentText = textArray[currentIndex];

@@ -10,18 +10,6 @@ import Link from 'next/link';
 
 const HomeText = () => {
 
-    // const ref = useRef(null)
-    // const isInView = useInView(ref, { once: true })
-    // const mainControls = useAnimation()
-    // const slideControls = useAnimation()
-
-    // useEffect(() => {
-    //     if (isInView) {
-    //         mainControls.start("visible")
-    //         slideControls.start("visible")
-    //     }
-    // }, [isInView])
-
     return (
         <section id='home'>
             <div className='flex flex-col justify-center items-center w-full'>

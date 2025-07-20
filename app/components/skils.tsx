@@ -19,6 +19,9 @@ import github from "../../public/github.svg"
 import docker from "../../public/docker.svg"
 import postman from "../../public/postman.svg"
 import figma from "../../public/figma.png"
+import python from "../../public/python.svg"
+import django from "../../public/django.svg"
+import shopify from "../../public/shopify.svg"
 import Image from "next/image"
 import { useState } from "react"
 import AnimatedSection1 from "../animation/animationdif"
@@ -31,12 +34,12 @@ const Skils = () => {
     const [outil, setOutil] = useState(false)
     const front = ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React JS", "Next JS"]
     const iconFront = [html, css, js, tailwind, react, next]
-    const iconBack = [node, express, ts, php]
+    const iconBack = [node, express, ts, php, python, django]
     const iconBd = [mongo, mysql, postgres, prisma]
-    const iconOutils = [git, github, docker, postman, figma]
-    const backend = ["Node JS", "Express JS", "TypeScript", "PHP"]
+    const iconOutils = [git, github, docker, postman, figma, shopify]
+    const backend = ["Node JS", "Express JS", "TypeScript", "PHP", "Python", "Django"]
     const bd = ["MongoDB", "MySQL", "Postgres SQL", "Prisma"]
-    const outils = ["Git", "GitHub", "Docker", "Postman", "Figma"]
+    const outils = ["Git", "GitHub", "Docker", "Postman", "Figma", "Shopify"]
 
     const handleFront = () => {
         setBack(false)
